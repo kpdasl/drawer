@@ -71,6 +71,10 @@ export default function TeamFlipTossPage() {
       setTimeout(() => setShowConfetti(false), 3000);
     }, 2000);
   };
+  const clearHistory = () => {
+    setHistory([]);
+    localStorage.removeItem('matchHistory');
+  };
 
   const reset = () => {
     setTeam1('');
@@ -165,6 +169,17 @@ export default function TeamFlipTossPage() {
       <Card className="md:w-80 overflow-y-auto max-h-[80vh] backdrop-blur-lg bg-white/20 shadow-xl hover:shadow-neon transition-shadow duration-300 sticky top-6">
         <CardContent>
           <h2 className="text-xl font-bold mb-4">Previous Matches</h2>
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-xl font-bold">Previous Matches</h2>
+            <Button
+              variant="destructive"
+              className="text-white"
+              onClick={clearHistory}
+            >
+              Clear
+            </Button>
+          </div>
+
           {history.length === 0 ? (
             <div className="text-gray-700 text-center py-4">No previous matches.</div>
           ) : (
