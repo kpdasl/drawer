@@ -168,7 +168,6 @@ export default function TeamFlipTossPage() {
       {/* Right Panel: History */}
       <Card className="md:w-80 overflow-y-auto max-h-[80vh] backdrop-blur-lg bg-white/20 shadow-xl hover:shadow-neon transition-shadow duration-300 sticky top-6">
         <CardContent>
-          <h2 className="text-xl font-bold mb-4">Previous Matches</h2>
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-bold">Previous Matches</h2>
             <Button
